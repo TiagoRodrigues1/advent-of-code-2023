@@ -24,8 +24,6 @@ for i, row in enumerate(rows):
             # Above right
             if i - 1 >= 0 and idx + 1 <= len(rows[i-1]) - 1 and rows[i-1][idx + 1].isdigit() and not rows[i -1][idx].isdigit():
                 collectedInfo.append({"row": i-1, "idx": idx + 1})
-            
-
             # Down
             if i + 1 <= len(rows) -1 and rows[i +1][idx].isdigit():
                 collectedInfo.append({"row": i+1, "idx": idx})   
@@ -85,7 +83,6 @@ for i, row in enumerate(rows):
                 
                 if len(digitCollect) > 0:
                     numbersToMul.append(int(digitCollect))
-     
             
             re = 1
             if len(numbersToMul) >= 2:
